@@ -9,9 +9,13 @@ function Greeting(){
 
 //Add Property
 function GreetingAgain(props){
-  return <h2>Hallo {props.name}</h2> 
+  return <h2>Hallo {props.name} <Gender gender={props.gender} /></h2> //This Gender component in GreetingAgin Component
 }
 
+//Add component in Component
+function Gender(props){
+  return <span>My gender {props.gender} </span>
+}
 
 
 function App() {
@@ -20,7 +24,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Greeting/>
-        <GreetingAgain name="My name is Hilman !!"/>
+        <GreetingAgain name="My name is Hilman !!" age="20" gender="Man"/>
       </header>
     </div>
   );
