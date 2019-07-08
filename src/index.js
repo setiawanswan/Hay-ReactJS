@@ -7,7 +7,12 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));
 
 const name = "my name is wawan";
-const element = <h1> Hallo {name} !! </h1>;
+
+function greeting(){
+    return " Assalamualaikum " + name
+}
+
+const element = <h1> {greeting (name)} </h1>;
 ReactDOM.render(element, document.getElementById('master'))
 
 // If you want your app to work offline and load faster, you can change
